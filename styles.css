@@ -1,0 +1,353 @@
+:root {
+ --primary-color: #4a6cf7;
+ --primary-dark: #3a56d4;
+ --secondary-color: #6c757d;
+ --success-color: #28a745;
+ --danger-color: #dc3545;
+ --warning-color: #ffc107;
+ --light-color: #f8f9fa;
+ --dark-color: #343a40;
+ --background-color: #f5f8ff;
+ --card-bg: #ffffff;
+ --border-color: #e9ecef;
+ --text-color: #495057;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+ background-color: var(--background-color);
+ color: var(--text-color);
+ line-height: 1.6;
+}
+
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+header {
+ text-align: center;
+ margin-bottom: 30px;
+ padding: 20px 0;
+ border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+ color: var(--primary-color);
+ margin-bottom: 10px;
+}
+
+header p {
+ color: var(--secondary-color);
+}
+
+/* Upload Section */
+.upload-section {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+ margin-bottom: 30px;
+}
+
+.upload-container {
+ flex: 1;
+ min-width: 300px;
+ height: 250px;
+ border: 2px dashed var(--primary-color);
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: rgba(74, 108, 247, 0.05);
+ transition: all 0.3s ease;
+}
+
+.upload-container.active {
+ background-color: rgba(74, 108, 247, 0.1);
+ border-color: var(--primary-dark);
+}
+
+.upload-content {
+ text-align: center;
+ padding: 20px;
+}
+
+.upload-content i {
+ font-size: 48px;
+ color: var(--primary-color);
+ margin-bottom: 15px;
+}
+
+.upload-content h3 {
+ margin-bottom: 10px;
+ color: var(--dark-color);
+}
+
+.upload-btn {
+ display: inline-block;
+ background-color: var(--primary-color);
+ color: white;
+ padding: 10px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-top: 10px;
+ transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+ background-color: var(--primary-dark);
+}
+
+/* Compression Settings */
+.compression-settings {
+ flex: 1;
+ min-width: 300px;
+ background-color: var(--card-bg);
+ border-radius: 10px;
+ padding: 20px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compression-settings h3 {
+ margin-bottom: 20px;
+ color: var(--dark-color);
+ border-bottom: 1px solid var(--border-color);
+ padding-bottom: 10px;
+}
+
+.setting-group {
+ margin-bottom: 15px;
+}
+
+.setting-group label {
+ display: block;
+ margin-bottom: 5px;
+ font-weight: 500;
+}
+
+.setting-group input[type="number"] {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid var(--border-color);
+ border-radius: 5px;
+}
+
+.setting-group input[type="range"] {
+ width: 80%;
+ margin-right: 10px;
+}
+
+.primary-btn {
+ display: block;
+ width: 100%;
+ background-color: var(--primary-color);
+ color: white;
+ border: none;
+ padding: 12px;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 16px;
+ font-weight: 500;
+ transition: background-color 0.3s ease;
+ margin-top: 20px;
+}
+
+.primary-btn:hover {
+ background-color: var(--primary-dark);
+}
+
+.primary-btn:disabled {
+ background-color: var(--secondary-color);
+ cursor: not-allowed;
+}
+
+/* Files Section */
+.files-section, .results-section {
+ background-color: var(--card-bg);
+ border-radius: 10px;
+ padding: 20px;
+ margin-bottom: 30px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.files-section h2, .results-section h2 {
+ margin-bottom: 20px;
+ color: var(--dark-color);
+ border-bottom: 1px solid var(--border-color);
+ padding-bottom: 10px;
+}
+
+.empty-message {
+ text-align: center;
+ color: var(--secondary-color);
+ padding: 20px;
+}
+
+.file-item {
+ display: flex;
+ align-items: center;
+ padding: 15px;
+ border: 1px solid var(--border-color);
+ border-radius: 5px;
+ margin-bottom: 10px;
+ background-color: var(--light-color);
+}
+
+.file-icon {
+ font-size: 24px;
+ margin-right: 15px;
+ color: var(--primary-color);
+}
+
+.file-info {
+ flex: 1;
+}
+
+.file-name {
+ font-weight: 500;
+ margin-bottom: 5px;
+}
+
+.file-size {
+ font-size: 14px;
+ color: var(--secondary-color);
+}
+
+.file-actions {
+ display: flex;
+ gap: 10px;
+}
+
+.file-actions button {
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-size: 18px;
+ transition: color 0.3s ease;
+}
+
+.file-actions .remove-btn {
+ color: var(--danger-color);
+}
+
+.file-preview {
+ width: 50px;
+ height: 50px;
+ object-fit: cover;
+ border-radius: 5px;
+ margin-right: 15px;
+}
+
+/* Results Section */
+.result-item {
+ display: flex;
+ align-items: center;
+ padding: 15px;
+ border: 1px solid var(--border-color);
+ border-radius: 5px;
+ margin-bottom: 10px;
+ background-color: var(--light-color);
+}
+
+.compression-info {
+ display: flex;
+ gap: 15px;
+ margin-top: 5px;
+ font-size: 14px;
+}
+
+.original-size, .compressed-size, .savings {
+ display: flex;
+ align-items: center;
+}
+
+.savings {
+ color: var(--success-color);
+}
+
+.download-btn {
+ background-color: var(--success-color);
+ color: white;
+ border: none;
+ padding: 8px 15px;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+ background-color: #218838;
+}
+
+/* Modal */
+.modal {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+ z-index: 1000;
+ align-items: center;
+ justify-content: center;
+}
+
+.modal.show {
+ display: flex;
+}
+
+.modal-content {
+ background-color: var(--card-bg);
+ padding: 30px;
+ border-radius: 10px;
+ width: 90%;
+ max-width: 500px;
+ text-align: center;
+}
+
+.progress-container {
+ height: 20px;
+ background-color: var(--light-color);
+ border-radius: 10px;
+ margin: 20px 0;
+ overflow: hidden;
+}
+
+.progress-bar {
+ height: 100%;
+ background-color: var(--primary-color);
+ width: 0;
+ transition: width 0.3s ease;
+}
+
+#progress-text {
+ font-weight: 500;
+}
+
+/* Footer */
+footer {
+ text-align: center;
+ padding: 20px 0;
+ color: var(--secondary-color);
+ border-top: 1px solid var(--border-color);
+ margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ .upload-section {
+     flex-direction: column;
+ }
+ 
+ .upload-container, .compression-settings {
+     width: 100%;
+ }
+}
