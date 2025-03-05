@@ -40,7 +40,7 @@ A simple and efficient **File Compressor Website** that allows users to compress
 
 ## 🎯 Live Demo
 
-Check out the live version: [Your Website URL]([https://compressor-file.netlify.app/])
+Check out the live version: (https://compressor-file.netlify.app/)
 
 ## 🤝 Contributing
 
